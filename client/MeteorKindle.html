@@ -6,7 +6,7 @@
 <body>
   <h1>Welcome to Meteor!!</h1>
   {{> hello}}
-  {{> test}}
+  {{> testlist}}
 </body>
 
 <template name="hello">
@@ -14,13 +14,17 @@
   <p>You've pressed the button {{counter}} times.</p>
 </template>
 
-<template name="test">
+<template name="testlist">
 	<div id="wrapper">
-		<div id="container">
-			<div class="item">
-				<img src="{{url}}" alt="" />
-				<p>{{title}}</p>
-			</div>
-		</div>
+		{{#each posts}}
+			{{> test}}
+		{{/each}}
+	</div>
+</template>
+
+<template name="test">
+	<div class="item">
+		<img src="{{url}}" alt="" />
+		<p>{{title}}</p>
 	</div>
 </template>
