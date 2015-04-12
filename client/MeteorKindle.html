@@ -1,6 +1,5 @@
 <head>
 	<title>MeteorKindle</title>
-	<link rel="stylesheet" type="text/css" href="sample.css" media="all" />
 	<script src="masonry.pkgd.min.js"></script>
 </head>
 
@@ -18,22 +17,18 @@
 <template name="test">
 	<div id="wrapper">
 		<div id="container">
-			{{> item}}
+			<div class="item">
+				<img src="http://ecx.images-amazon.com/images/I/51tT2m9ZF0L._SL200_.jpg" alt="" />
+				<p>title 1</p>
+			</div>
+			<div class="item x2">
+				<img src="http://ecx.images-amazon.com/images/I/51tT2m9ZF0L._SL200_.jpg" alt="" />
+				<p>title 2</p>
+			</div>
+			<div class="item">
+				<img src="http://ecx.images-amazon.com/images/I/51tT2m9ZF0L._SL200_.jpg" alt="" />
+				<p>title 3</p>
+			</div>
 		</div>
-	</div>
-</template>
-
-<template name="item">
-	<div class="item">
-		<img src="http://ecx.images-amazon.com/images/I/51tT2m9ZF0L._SL200_.jpg" alt="" />
-		<p>title 1</p>
-	</div>
-	<div class="item x2">
-		<img src="http://ecx.images-amazon.com/images/I/51tT2m9ZF0L._SL200_.jpg" alt="" />
-		<p>title 2</p>
-	</div>
-	<div class="item">
-		<img src="http://ecx.images-amazon.com/images/I/51tT2m9ZF0L._SL200_.jpg" alt="" />
-		<p>title 3</p>
 	</div>
 </template>
