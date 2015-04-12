@@ -1,30 +1,22 @@
 <head>
-  <title>MeteorKindle</title>
+	<title>MeteorKindle</title>
+	<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="masonry.pkgd.min.js"></script>
+	<script>
+	$(function(){
+		$('#container').masonry({
+			itemSelector: '.item',
+			columnWidth: 180,   
+			isFitWidth: true
+		});
+	});
+	</script>
 </head>
 
 <body>
   <h1>Welcome to Meteor!!</h1>
-
   {{> hello}}
-
-<div id="mesh">
-<ul>
-<li>A</li>
-<li>B</li>
-<li>C</li>
-</ul>
-<ul>
-<li>D</li>
-<li>E</li>
-<li>F</li>
-</ul>
-<ul>
-<li>G</li>
-<li>H</li>
-<li>I</li>
-</ul>
-</div>
-
+  {{> test}}
 </body>
 
 <template name="hello">
@@ -32,3 +24,21 @@
   <p>You've pressed the button {{counter}} times.</p>
 </template>
 
+<template name="test">
+	<div id="wrapper">
+		<div id="container">
+			<div class="item">
+				<img src="http://ecx.images-amazon.com/images/I/51tT2m9ZF0L._SL200_.jpg" alt="" />
+				<p>title 1</p>
+			</div>
+			<div class="item x2">
+				<img src="http://ecx.images-amazon.com/images/I/51tT2m9ZF0L._SL200_.jpg" alt="" />
+				<p>title 2</p>
+			</div>
+			<div class="item">
+				<img src="http://ecx.images-amazon.com/images/I/51tT2m9ZF0L._SL200_.jpg" alt="" />
+				<p>title 3</p>
+			</div>
+		</div>
+	</div>
+</template>
