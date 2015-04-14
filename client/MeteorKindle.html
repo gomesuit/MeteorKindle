@@ -24,17 +24,17 @@ $(function(){
 
 <template name="testlist">
 	<table align="center">
+		<tr>
 		{{#each posts}}
 			{{> test}}
 		{{/each}}
+		</tr>
 	</table>
 </template>
 
 <template name="test">
-	<tr>
 		<td>
 			<img src="{{largeImage}}" alt="" />
 			<p>{{title}}</p>
 		</td>
-	</tr>
 </template>
